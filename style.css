@@ -18,7 +18,7 @@ body {
 .card {
     position: relative;
     width: 350px;
-    height: 180px;
+    height: 200px;
     background:#fff;
     border-radius: 20px;
     box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
@@ -107,7 +107,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    margin-top: 5px; /* Giúp các nút tự đẩy xuống cuối khung */
+    margin-top: 8px; /* Giúp các nút tự đẩy xuống cuối khung */
 }
 
 .card .content .details .action-btn button {
@@ -121,9 +121,11 @@ body {
     color: #fff;
     cursor: pointer;
 }
-    
 .card .content .details .action-btn button:nth-child(2) {
     border: 1px solid #999;
     color: #999;
     background: #fff;
 }
+.card .content .details .action-btn button:hover{
+    color: #000;
+}    
