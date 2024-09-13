@@ -1,19 +1,41 @@
-const HomeWorkButton = document.querySelector('#assignment-btn');
-const CloseHomeWork = document.querySelector('#close');
-const HomeWorkCard = document.querySelector('.modal');
-
-// Mở modal với hiệu ứng
-HomeWorkButton.addEventListener('click', function() {
-    HomeWorkCard.style.display = 'flex'; // Đầu tiên phải hiển thị modal
-    setTimeout(() => {
-        HomeWorkCard.classList.add('show'); // Thêm class 'show' để kích hoạt hiệu ứng
-    }, 10); // Thêm một chút độ trễ để đảm bảo transition được kích hoạt
+const btnInformation = document.querySelector('#btn-inf');
+const CardInfomation = document.querySelector('.cardInfomation');
+// Mở rộng hoặc thu nhỏ cardInfomation khi click
+btnInformation.addEventListener('click', function() {
+    if (CardInfomation.style.display === 'none' || CardInfomation.style.display === '') {
+        CardInfomation.style.display = 'flex';
+        setTimeout(() => { // Thêm một chút trễ để thực hiện hiệu ứng mượt mà hơn
+            CardInfomation.style.width = '350px';
+            CardInfomation.style.height = '450px';
+        }, 10); 
+    } else {
+        CardInfomation.style.width = '1px';
+        CardInfomation.style.height = '1px';
+        
+        // Đợi animation hoàn thành trước khi ẩn
+        setTimeout(() => {
+            CardInfomation.style.display = 'none';
+        }, 500);
+    }
 });
+const btnHomeWork = document.querySelector('#btn-homeWork');
+const CardHomeWork = document.querySelector('.cardHomeWork');
 
-// Đóng modal với hiệu ứng
-CloseHomeWork.addEventListener('click', function() {
-    HomeWorkCard.classList.remove('show'); // Bỏ class 'show' để bắt đầu hiệu ứng tắt
-    setTimeout(() => {
-        HomeWorkCard.style.display = 'none'; // Đợi cho đến khi hiệu ứng tắt xong rồi mới ẩn modal
-    }, 550); // Đợi 550ms để khớp với thời gian của transition
+
+btnHomeWork.addEventListener('click', function() {
+    if (CardHomeWork.style.display === 'none' || CardHomeWork.style.display === '') {
+        CardHomeWork.style.display = 'flex';
+        setTimeout(() => { // Thêm một chút trễ để thực hiện hiệu ứng mượt mà hơn
+            CardHomeWork.style.width = '350px';
+            CardHomeWork.style.height = '450px';
+        }, 10); 
+    } else {
+        CardHomeWork.style.width = '1px';
+        CardHomeWork.style.height = '1px';
+        
+        // Đợi animation hoàn thành trước khi ẩn
+        setTimeout(() => {
+            CardHomeWork.style.display = 'none';
+        }, 500);
+    }
 });
