@@ -117,7 +117,6 @@ body {
 }
 .cardHomeWork .body-text,
 .card .card-content .card-details .action-btn {
-    display: flex;
     justify-content: space-between;
     gap: 20px;
     margin-top: 8px;
